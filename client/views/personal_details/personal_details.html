@@ -1,0 +1,41 @@
+<template name="personalDetails">
+	<div class="content-left" id="margin-right">
+			<div class="section">
+				<div class="clearfix"><h2>Personal details</h2></div>
+				<div class="item">
+					<ul id="personal-details">
+						<li><span>ПІБ:</span>{{fn}}</li>
+						<li><span>Дата народження:</span>{{date}}</li>
+						<li class="clearfix"><span>Адреса:</span>
+							<ul id="address-lines">
+								<li>{{address_street}},</li>
+								<li>{{address_city}},</li>
+								<li>{{address_country}}</li>
+							</ul>
+						</li>
+						<li><span>Телефон:</span>{{telephone}}</li>
+						<li><span>Email:</span><a href="mailto:{{email}}">{{email}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<div class="content-right">
+		<div class="section">
+			<div class="clearfix"><h2>Education</h2></div>
+			<div class="item">
+				<h3>{{first_education}}</h3>
+				<div class="date">{{first_years}}</div>
+				<div class="description">
+					<p>{{first_data}}</p>
+				</div>
+			</div>
+			<div class="item last">
+				<h3>{{second_education}}</h3>
+				<div class="date">{{second_years}}</div>
+				<div class="description">
+					<p class="margin">{{second_data}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

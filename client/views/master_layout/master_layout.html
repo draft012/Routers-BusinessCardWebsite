@@ -1,0 +1,65 @@
+<template name="MasterLayout">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.png">
+		<title>{{headName}} | {{headJob}}</title>
+		<link href='http://webfonts.ru/import/yanone.css' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="page-shadow">
+			<div id="page">
+				<div class="content-innertube">
+					<div id="header">
+						<h1>{{name}} | {{job}}</h1>
+						<ul id="main-nav">
+							<li><a href="{{urlFor route='personalDetails'}}">Personal details</a></li>
+							<li><a href="{{urlFor route='skills'}}">Skills</a></li>
+							<li><a href="{{urlFor route='review'}}">Add a review</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div id="text"><img src="../resume.png" alt="" title="" width="265" height="59"></div>
+					<div id="stripe"></div>
+						{{>yield}}
+				</div>
+				<div class="clear"></div>
+				<div id="footer">
+					<div id="footer-innertube">
+						<div id="footer-address">
+							<h5>Address</h5>
+							<ul>
+								<li>{{address_street}},</li>
+								<li>{{address_city}},</li>
+								<li>{{address_country}}</li>
+							</ul>
+						</div>
+						<div id="footer-contact">
+							<h5>Contact</h5>
+							<ul>
+								<li>{{telephone}}</li>
+								<li><a href="mailto:{{email}}" title="Відправ мені email">{{email}}</a></li>
+							</ul>
+						</div>
+						<div id="footer-social">
+							<h5>Social</h5>
+							<ul>
+								<li><a href="{{twitter_href}}" title=""><img src="../twitter.png" alt="twitter" title="В розробці:)"></a></li>
+								<li><a href="{{facebook_href}}" title=""><img src="../facebook.png" alt="facebook" title="В розробці:)"></a></li>
+								<li><a href="{{flikr_href}}" title=""><img src="../flickr.png" alt="flickr" title="В розробці:)"></a></li>
+								<li><a href="{{linkedin_href}}" title=""><img src="../linkedin.png" alt="linkedin" title="В розробці:)"></a></li>
+							</ul>
+						</div>
+						<div id="footer-resume">
+							<h5>Resume</h5>
+							<div id="download-resume" title="В розробці:)"><a href="{{resume_href}}"></a></div>
+						</div>
+						<div class="clear"></div>
+						<div id="footer-nav"></div>
+						<div class="copy">&copy; {{copy_name}}, {{copy_year}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</template>

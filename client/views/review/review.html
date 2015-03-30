@@ -1,0 +1,26 @@
+<template name="review">
+	<div class="container">
+		<div class="form">
+			<div class="clearfix"><h2>Add a review</h2></div>
+			<form class="new-task">
+				<p><label for="name">Name:</label></p>
+				<p><input type="name" name="name" placeholder="Type to add you name"></p>
+				<p><label for="text">Message:</label></p>
+				<p><input type="text" name="text" placeholder="Type to add you message"></p>
+				<div id="submit"><input type="submit" name="button" value="Submit"></div>
+			</form>
+		</div>
+		<div class="chat">
+		<div class="clearfix">
+			<h2>CHAT</h2>
+		</div>
+			{{#each tasks}}
+				<li>
+					<!--<button class="delete">&times;</button>-->
+					<span class="name"><strong>{{name}}:></strong></span>
+					<span class="text">{{text}}</span>
+				</li>
+			{{/each}}
+		</div>
+	</div>
+</template>
